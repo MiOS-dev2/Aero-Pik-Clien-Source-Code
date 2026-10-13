@@ -1,0 +1,7 @@
+#splash { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 24px; text-align: center; background-color: var(--paper); background-image: radial-gradient(var(--dot) 1.2px, transparent 1.5px); background-size: 18px 18px; }
+#splash .chick { width: 96px; height: 96px; }
+.splash-title { font-weight: 900; font-size: 20px; }
+#splashMsg { max-width: 460px; color: var(--muted); font-weight: 600; }
+#splash.fail .splash-title { color: var(--danger); }
+#splash.fail .chick { animation: none; transform: rotate(14deg); filter: grayscale(.6); }
+#splash.fail #splashMsg { color: var(--ink); background: var(--card); border: 2px solid var(--edge); border-radius: 14px; padding: 12px 16px; box-shadow: 4px 4px 0 var(--shadow-c); text-align: left; }

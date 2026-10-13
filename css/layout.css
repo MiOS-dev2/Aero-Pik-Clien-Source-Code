@@ -1,0 +1,19 @@
+.page { max-width: 1000px; margin: 0 auto; padding: 14px 12px 12px; padding-top: calc(66px + env(safe-area-inset-top, 0px)); height: 100dvh; display: grid; grid-template-columns: 160px 300px minmax(0, 1fr); gap: 16px; }
+.box { background: var(--card); border: 2px solid var(--edge); border-radius: 14px 18px 14px 16px; box-shadow: 5px 5px 0 var(--shadow-c); display: flex; flex-direction: column; min-height: 0; min-width: 0; overflow: hidden; }
+.box-head { padding: 10px 16px; background: var(--yellow); color: #1f1b16; border-bottom: 2px solid var(--edge); font-weight: 900; font-size: 13px; letter-spacing: .3px; }
+
+.nav { display: flex; flex-direction: column; gap: 6px; align-self: start; }
+.nav button { text-align: left; padding: 9px 12px; border: 2px solid transparent; border-radius: 10px; font-weight: 700; transition: transform .1s; }
+.nav button:hover { background: var(--hover); border-color: var(--edge); transform: rotate(-1deg); }
+.nav button:nth-child(even):hover { transform: rotate(1deg); }
+.nav button.on { background: var(--yellow); color: #1f1b16; border-color: var(--edge); box-shadow: 3px 3px 0 var(--shadow-c); transform: rotate(-1deg); }
+
+@media (max-width: 800px) {
+  .page { grid-template-columns: 1fr; grid-template-rows: auto minmax(0, 1fr); padding: 0; padding-top: calc(50px + env(safe-area-inset-top, 0px)); gap: 0; }
+  .nav { flex-direction: row; overflow-x: auto; background: var(--paper); border-bottom: 2px solid var(--edge); padding: 8px; gap: 8px; }
+  .nav button { white-space: nowrap; padding: 6px 12px; }
+  .box { border-radius: 0; border-width: 0; box-shadow: none; }
+  .chat { display: none; grid-row: 1 / 3; }
+  #app.chat-open .chat { display: flex; }
+  #app.chat-open .dialogs, #app.chat-open .nav { display: none; }
+}

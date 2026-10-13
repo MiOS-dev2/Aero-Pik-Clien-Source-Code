@@ -1,0 +1,29 @@
+#navSettings::before { background-image: url(../icons/vista.settings.webp); }
+body { font-size: var(--fs, 13px) !important; }
+.set-group { font-weight: 700; color: #1e395b; border-bottom: 1px solid #d4e1f0; padding: 2px 0; margin: 4px 0 8px; }
+.set-group:not(:first-child) { margin-top: 16px; }
+.set-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 6px 0; }
+.set-row > span { display: flex; flex-direction: column; min-width: 0; }
+.set-row small { color: #6d6d6d; font-size: .85em; }
+.set-row select { border: 1px solid #abadb3; border-radius: 2px; padding: 3px 4px; font: inherit; background: #fff; max-width: 190px; }
+.set-row input[type=checkbox] { width: 16px; height: 16px; flex: none; }
+.set-range { display: flex; align-items: center; gap: 8px; } .set-range input { width: 110px; } .set-range b { min-width: 42px; font-weight: 400; }
+.set-note { margin-top: 14px; color: #6d6d6d; font-size: .9em; }
+#settingsModal { z-index: 35; }
+
+@media (min-width: 801px) { .page, .top-in { max-width: var(--pw, 1000px) !important; } }
+
+html[data-wall="green"] body, html[data-wall="green"] #splash { background: radial-gradient(ellipse 80% 55% at 25% 0, rgba(255,255,255,.3), transparent 70%), linear-gradient(#2f8f55, #0f4a2c) fixed; }
+html[data-wall="violet"] body, html[data-wall="violet"] #splash { background: radial-gradient(ellipse 80% 55% at 25% 0, rgba(255,255,255,.3), transparent 70%), linear-gradient(#7b5fc9, #2d1b69) fixed; }
+html[data-wall="graphite"] body, html[data-wall="graphite"] #splash { background: radial-gradient(ellipse 80% 55% at 25% 0, rgba(255,255,255,.25), transparent 70%), linear-gradient(#5a6572, #1d232b) fixed; }
+html[data-wall="red"] body, html[data-wall="red"] #splash { background: radial-gradient(ellipse 80% 55% at 25% 0, rgba(255,255,255,.3), transparent 70%), linear-gradient(#c4503f, #5e150d) fixed; }
+
+html[data-glass="green"] { --glass: linear-gradient(#eaf7ec 0, #c9e8cf 48%, #a9d6b3 52%, #bfe3c6 100%); }
+html[data-glass="violet"] { --glass: linear-gradient(#f1ecfa 0, #d9cdf0 48%, #c3b2e5 52%, #d3c6ec 100%); }
+html[data-glass="graphite"] { --glass: linear-gradient(#f0f1f3 0, #d3d7dc 48%, #bcc2ca 52%, #cdd2d8 100%); }
+html[data-glass] .top, html[data-glass] .auth-top, html[data-glass] .box-head, html[data-glass] .pop-head { background: var(--glass); }
+
+html[data-compact] .dlg { padding: 4px 8px; } html[data-compact] .m { padding: 2px 8px; } html[data-compact] .row { margin-bottom: 8px; }
+html[data-anim="off"] *, html[data-anim="off"] *::before, html[data-anim="off"] *::after { animation: none !important; transition: none !important; }
+html[data-time="off"] .m-time { display: none; }
+html[data-says="off"] .m-name::after { content: ""; }

@@ -1,0 +1,14 @@
+.dialogs-list { overflow-y: auto; flex: 1; min-height: 0; padding: 8px; display: flex; flex-direction: column; gap: 4px; }
+.dlg { display: flex; gap: 12px; align-items: center; width: 100%; text-align: left; padding: 8px 10px; border: 2px solid transparent; border-radius: 12px; transition: transform .1s; }
+.dlg:hover { background: var(--hover); border-color: var(--edge); }
+.dlg.on { background: var(--active); border-color: var(--edge); box-shadow: 3px 3px 0 var(--shadow-c); }
+.dlg:nth-child(odd) .av { transform: rotate(-4deg); }
+.dlg:nth-child(even) .av { transform: rotate(3deg); }
+.dlg-meta { flex: 1; min-width: 0; }
+.dlg-top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+.dlg-name { font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dlg-time { color: var(--muted); font-size: 11px; flex: none; }
+.dlg-prev { color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 1px; }
+.dlg-label { padding: 8px 6px 4px; color: var(--link); font-size: 12px; font-weight: 900; }
+.mini { flex: none; padding: 4px 10px; border: 2px solid var(--edge); border-radius: 12px; background: var(--card); font-size: 12px; font-weight: 800; box-shadow: 2px 2px 0 var(--shadow-c); }
+.mini.main { background: var(--coral); color: #1f1b16; }

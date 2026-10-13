@@ -1,0 +1,21 @@
+.modal { position: fixed; inset: 0; background: rgba(31, 27, 22, .6); display: grid; place-items: start center; padding: 8vh 14px 14px; z-index: 30; overflow-y: auto; }
+.pop { width: 100%; max-width: 420px; background: var(--card); border: 2px solid var(--edge); border-radius: 16px 20px 16px 18px; overflow: hidden; box-shadow: 7px 7px 0 var(--shadow-c); animation: pop .18s cubic-bezier(.3, 1.6, .5, 1); }
+@keyframes pop { from { transform: translateY(10px) rotate(-1.5deg) scale(.97); opacity: 0; } to { transform: none; opacity: 1; } }
+.pop-head { background: var(--yellow); color: #1f1b16; padding: 12px 18px; font-weight: 900; font-size: 15px; border-bottom: 2px solid var(--edge); }
+.pop-body { padding: 18px; max-height: 66vh; overflow-y: auto; }
+.pop-foot { display: flex; justify-content: flex-end; gap: 10px; padding: 12px 18px; background: var(--soft); border-top: 2px solid var(--edge); }
+.ava-pick { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+
+.add-row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 6px 3px 11px; border: 2px solid var(--edge); border-radius: 14px; background: var(--mint); color: #1f1b16; font-weight: 800; box-shadow: 2px 2px 0 var(--shadow-c); }
+.chip button { width: 18px; height: 18px; border-radius: 50%; line-height: 1; font-weight: 900; }
+.chip button:hover { background: rgba(0, 0, 0, .15); }
+.mem { display: flex; gap: 12px; align-items: center; padding: 7px 0; }
+.mem-meta { flex: 1; min-width: 0; }
+.mem-name { font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mem-sub { color: var(--muted); font-size: 12px; }
+
+.viewer { background: rgba(10, 8, 5, .92); z-index: 50; cursor: zoom-out; place-items: center; padding: 14px; }
+.viewer img { max-width: 100%; max-height: 100%; border: 3px solid var(--yellow); border-radius: 8px; }
+@media (prefers-reduced-motion: reduce) { .pop { animation: none; } }

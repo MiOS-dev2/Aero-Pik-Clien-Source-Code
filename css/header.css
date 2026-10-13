@@ -1,0 +1,11 @@
+.top { position: fixed; top: 0; left: 0; right: 0; height: 50px; background: var(--bar); border-bottom: 3px solid var(--yellow); z-index: 10; padding-top: env(safe-area-inset-top, 0px); box-sizing: content-box; }
+.top-in { max-width: 1000px; height: 47px; margin: 0 auto; padding: 0 12px; display: flex; align-items: center; gap: 16px; }
+.logo { display: inline-flex; align-items: center; gap: 8px; color: var(--yellow); font-weight: 900; font-size: 24px; letter-spacing: -.5px; width: 150px; flex: none; transform: rotate(-2deg); }
+.logo::before { content: ""; flex: none; width: 34px; height: 34px; background: var(--chick) center / contain no-repeat; }
+.top-search { flex: 1; max-width: 360px; height: 32px; padding: 0 14px; border: 2px solid var(--yellow); border-radius: 18px; background: #fffdf6; color: #1f1b16; }
+.top-search::placeholder { color: #8a7f6a; }
+.top-search:focus { outline: none; box-shadow: 0 0 0 3px rgba(255, 210, 63, .45); }
+.top-me { margin-left: auto; display: flex; align-items: center; gap: 8px; color: #fbf3dd; padding: 3px 12px 3px 4px; border-radius: 20px; max-width: 210px; font-weight: 700; }
+.top-me:hover { background: rgba(255, 255, 255, .12); }
+.top-me span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 800px) { .logo { width: auto; } .top-me span { display: none; } .top-me { padding: 3px; } }
